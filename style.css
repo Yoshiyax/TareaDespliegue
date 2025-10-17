@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background: #00695c;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  text-align: justify;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+}
+
+/*navbar estilos*/
+nav {
+  background-color: #004d40;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: right;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Carrusel */
+.carousel {
+  padding: 30px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 300px;          /* Ancho fijo para imágenes verticales */
+  height: 500px;         /* Alto fijo */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: calc(100% * 3);  /* 3 imágenes */
+  height: 100%;
+  animation: slide 15s infinite;
+}
+
+.carousel-slide img {
+  width: calc(100% / 3);  /* Cada imagen toma 1/3 */
+  height: 100%;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+
+/* Animación */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(0%); }
+  36% { transform: translateX(-100%); }
+  66% { transform: translateX(-100%); }
+  69% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+/*container y cards*/
+.container {
+  display: flex;
+  gap: 20px; /* espacio entre cards */
+  flex-wrap: wrap; /* que las cards se ajusten en varias filas si no caben */
+  justify-content: center; /* centra las cards horizontalmente */
+  padding: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.95em;
+  color: #666;
+}
+
+.contact-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
