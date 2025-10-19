@@ -60,8 +60,8 @@ nav ul li a:hover {
 }
 
 .carousel-container {
-  width: 300px;          /* Ancho fijo para imágenes verticales */
-  height: 500px;         /* Alto fijo */
+  width: 300px;          
+  height: 500px;         
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
@@ -71,27 +71,35 @@ nav ul li a:hover {
 
 .carousel-slide {
   display: flex;
-  width: calc(100% * 3);  /* 3 imágenes */
+  width: calc(100% * 1);
   height: 100%;
   animation: slide 15s infinite;
 }
 
 .carousel-slide img {
-  width: calc(100% / 3);  /* Cada imagen toma 1/3 */
+  width: calc(100% / 1);
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   background-color: #fff;
 }
 
 
-/* Animación */
+/* Animación de carrusel*/
 @keyframes slide {
-  0% { transform: translateX(0%); }
-  33% { transform: translateX(0%); }
-  36% { transform: translateX(-100%); }
-  66% { transform: translateX(-100%); }
-  69% { transform: translateX(-200%); }
-  100% { transform: translateX(-200%); }
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+
+  25% { transform: translateX(-100%); }
+  40% { transform: translateX(-100%); }
+
+  45% { transform: translateX(-200%); }
+  60% { transform: translateX(-200%); }
+
+  65% { transform: translateX(-300%); }
+  80% { transform: translateX(-300%); }
+
+  85% { transform: translateX(-400%); }
+  100% { transform: translateX(-400%); }
 }
 
 /*container y cards*/
@@ -111,6 +119,8 @@ nav ul li a:hover {
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -139,7 +149,7 @@ nav ul li a:hover {
 
 .contact-button-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .contact-button {
